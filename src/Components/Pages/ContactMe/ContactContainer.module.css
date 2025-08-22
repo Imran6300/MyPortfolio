@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  background-color: #0D1117;
+  padding: 50px 20px 80px 20px;
+  box-sizing: border-box;
+}
+
+.contact {
+  color: #58A6FF;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.cardbody {
+  background-color: #161B22;
+  margin: 2% auto;
+  padding: 30px;
+  box-shadow: 0px 0px 5px #C9D1D9;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.formInpt {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #0D1117;
+  border: 1px solid #30363D;
+  color: #C9D1D9;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formInpt:focus {
+  background-color: #0D1117;
+  color: #C9D1D9;
+  border: 1px solid #58A6FF;
+  box-shadow: 0px 0px 10px #58A6FF33;
+}
+
+.submitbtn {
+  background-color: #58A6FF;
+  color: #0D1117;
+  display: block;
+  margin: 15px auto 0 auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitbtn:hover {
+  color: #C9D1D9;
+  border: 1px solid #58A6FF;
+  box-shadow: 0px 0px 10px #C9D1D9;
+  background-color: #0D1117;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 15px 60px 15px;
+  }
+
+  .cardbody {
+    padding: 20px;
+  }
+
+  .formInpt {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .submitbtn {
+    width: 100%;
+  }
+}

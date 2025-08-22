@@ -1,0 +1,30 @@
+.navHead{
+  position: absolute;
+  /* background-color: red; */
+  width: 50%;
+  display: flex;
+  left: 25%;
+  border: 0.5px solid white;
+  border-radius: 50px;
+  margin-top: 15px;
+  /* position: fixed; */
+}
+h4{
+  color: #58A6FF;
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* h4:hover{
+  text-decoration: underline;
+} */
+.anchor{
+  color: #8B949E;
+}
+.anchor:hover{
+  color: #C9D1D9;
+}
+@media (max-width:1113px) {
+  .navHead{
+    display: none;
+  }
+}
