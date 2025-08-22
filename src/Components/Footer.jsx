@@ -11,7 +11,7 @@ const Footer = () => {
       </p>
       <div className={`${Css.socialicons}`}>
         <a
-          href="https://github.com/Imran6300/Local-repo"
+          href="https://github.com/Imran6300"
           target="_blank"
           rel="noreferrer"
         >
