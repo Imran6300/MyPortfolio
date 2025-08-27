@@ -87,7 +87,7 @@ const MyProjects = () => {
             <div className="right">
               <div className={`${Css.cardImg}`}>
                 <img
-                  src="./digitalagency.png"
+                  src="./DigitalAgency.png"
                   alt=""
                 />
               </div>
