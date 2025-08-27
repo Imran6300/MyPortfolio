@@ -40,7 +40,7 @@ const MyProjects = () => {
             <div className={`${Css.right}`}>
               <div className={`${Css.cardImg}`}>
                 <img
-                  src="http://localhost:5173/MyPortfolio/furniture.png"
+                  src="./furniture.png"
                   alt=""
                 />
               </div>
@@ -87,7 +87,7 @@ const MyProjects = () => {
             <div className="right">
               <div className={`${Css.cardImg}`}>
                 <img
-                  src="http://localhost:5173/MyPortfolio/digitalagency.png"
+                  src="./digitalagency.png"
                   alt=""
                 />
               </div>
