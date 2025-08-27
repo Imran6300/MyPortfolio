@@ -127,7 +127,7 @@ const MyProjects = () => {
             <div className="right">
               <div className={`${Css.cardImg}`}>
                 <img
-                  src="http://localhost:5173/MyPortfolio/Stylish.png"
+                  src="./Stylish.png"
                   alt=""
                 />
               </div>
