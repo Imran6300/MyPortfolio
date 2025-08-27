@@ -10,7 +10,7 @@ const Skills = () => {
           easing="ease-out"
           initialOpacity={0}
         >
-          <img src="React.png" />
+          <img src="http://localhost:5173/MyPortfolio/React.png" />
         </FadeContent>
       }
       {
@@ -20,7 +20,7 @@ const Skills = () => {
           easing="ease-out"
           initialOpacity={0}
         >
-          <img src="NodeJS.png" />
+          <img src="http://localhost:5173/MyPortfolio/NodeJS.png" />
         </FadeContent>
       }
       {
@@ -30,7 +30,7 @@ const Skills = () => {
           easing="ease-out"
           initialOpacity={0}
         >
-          <img src="ExpressJS.png" />
+          <img src="http://localhost:5173/MyPortfolio/ExpressJS.png" />
         </FadeContent>
       }
       {
@@ -40,7 +40,7 @@ const Skills = () => {
           easing="ease-out"
           initialOpacity={0}
         >
-          <img src="MongoDB.png" />
+          <img src="http://localhost:5173/MyPortfolio/MongoDB.png" />
         </FadeContent>
       }
     </div>

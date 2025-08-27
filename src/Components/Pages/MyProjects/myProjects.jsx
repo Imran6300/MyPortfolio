@@ -39,7 +39,10 @@ const MyProjects = () => {
             <hr className={`${Css.hr}`} />
             <div className={`${Css.right}`}>
               <div className={`${Css.cardImg}`}>
-                <img src="./furniture.png" alt="" />
+                <img
+                  src="http://localhost:5173/MyPortfolio/furniture.png"
+                  alt=""
+                />
               </div>
             </div>
           </section>
@@ -83,43 +86,56 @@ const MyProjects = () => {
             <hr className={`${Css.hr}`} />
             <div className="right">
               <div className={`${Css.cardImg}`}>
-                <img src="./DigitalAgency.png" alt="" />
+                <img
+                  src="http://localhost:5173/MyPortfolio/digitalagency.png"
+                  alt=""
+                />
               </div>
             </div>
           </section>
           <section className={Css.card}>
             <div className="left">
-              <h2>Furniture E-Commerce Platform</h2>
+              <h2>Stylish Clothing E-Commerce Platform</h2>
               <h4 style={{ color: "white" }}>
-                Full-stack e-commerce web app for buying and selling furniture
-                with secure payments and admin controls.
+                Full-stack e-commerce app for browsing, buying, and selling trendy fashion with secure payments and admin controls.
               </h4>
-              <h6>overview :</h6>
+              <h6>Overview :</h6>
               <p style={{ color: "white" }}>
-                This MERN-based e-commerce platform allows users to browse
-                products, add them to the cart, and complete secure payments. It
-                includes an admin dashboard for managing products and orders,
-                ensuring smooth backend operations.
+                This MERN-based clothing e-commerce platform allows users to
+                explore trendy clothing products, add items to the cart, and
+                complete secure payments. The admin dashboard provides full
+                control over product listings, inventory, and orders, ensuring
+                seamless backend operations.
               </p>
               <h6>Key Features :</h6>
               <ul>
                 <li>JWT authentication with bcrypt password hashing</li>
-                <li>Stripe payment gateway integration</li>
-                <li>Admin dashboard for product management</li>
-                <li>Responsive UI using Tailwind CSS</li>
-                <li>REST API for product & order data</li>
+                <li>Stripe payment gateway for secure transactions</li>
+                <li>
+                  Admin dashboard for product, inventory, and order management
+                </li>
+                <li>Responsive design using Tailwind CSS</li>
+                <li>REST API endpoints for products, orders, and users</li>
+                <li>Product categories, search, and filters for enhanced UX</li>
               </ul>
               <h6>
                 GitHub :{" "}
-                <a href="https://github.com/Imran6300/Practice" target="_main">
+                <a
+                  href="https://github.com/Imran6300/Practice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   github.com/Imran6300/Repo
-                </a>{" "}
+                </a>
               </h6>
             </div>
             <hr className={`${Css.hr}`} />
             <div className="right">
               <div className={`${Css.cardImg}`}>
-                <img src="./furniture.png" alt="" />
+                <img
+                  src="http://localhost:5173/MyPortfolio/Stylish.png"
+                  alt=""
+                />
               </div>
             </div>
           </section>
