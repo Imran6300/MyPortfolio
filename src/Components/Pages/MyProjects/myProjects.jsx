@@ -97,7 +97,8 @@ const MyProjects = () => {
             <div className="left">
               <h2>Stylish Clothing E-Commerce Platform</h2>
               <h4 style={{ color: "white" }}>
-                Full-stack e-commerce app for browsing, buying, and selling trendy fashion with secure payments and admin controls.
+                Full-stack e-commerce app for browsing, buying, and selling
+                trendy fashion with secure payments and admin controls.
               </h4>
               <h6>Overview :</h6>
               <p style={{ color: "white" }}>
@@ -123,7 +124,7 @@ const MyProjects = () => {
                 <a
                   href="https://github.com/Imran6300/Practice"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel=""
                 >
                   github.com/Imran6300/Repo
                 </a>
@@ -133,7 +134,7 @@ const MyProjects = () => {
             <div className="right">
               <div className={`${Css.cardImg}`}>
                 <img
-                  src="http://localhost:5173/MyPortfolio/Stylish.png"
+                  src="./Stylish.png"
                   alt=""
                 />
               </div>

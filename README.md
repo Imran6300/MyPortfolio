@@ -1,12 +1,37 @@
-# React + Vite
+# 🌐 My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey 👋 this is my personal portfolio website where I showcase my work as a **MERN stack developer**.  
+I built it mainly with React and styled it to be clean, modern, and full of little animations that make it stand out.  
+It’s also fully responsive, so it looks good on any device.
 
-Currently, two official plugins are available:
+🔗 Live site: [Check it out here](https://my-portfolio-vert-six-28.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ What’s inside
+- A nice interactive hero section (try moving your cursor 😉)  
+- About me section where I talk a bit about who I am  
+- Projects section with details about the apps I’ve built  
+- Contact form that actually works so people can reach out  
+- Fully responsive design that adapts to mobile, tablet, and desktop  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech I used
+- **React** for the frontend  
+- **JavaScript (ES6+)**  
+- **CSS / TailwindCSS** for styling and animations  
+- **Node.js + Express** (backend planned for future updates)  
+- **MongoDB** (for future blog/contact integration)  
+- Deployed on **Vercel**  
+
+---
+
+## 🚀 Getting Started
+If you want to run this locally:  
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
+npm run dev
