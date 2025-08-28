@@ -14,13 +14,13 @@ function App() {
         <HeroSection
           raysOrigin="top-center"
           raysColor="#C9D1D9"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
+          raysSpeed={2}
+          lightSpread={1}
+          rayLength={3}
           followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
+          mouseInfluence={0.5}
+          noiseAmount={0}
+          distortion={0}
           className="custom-rays"
         />
         <HeroMain />
