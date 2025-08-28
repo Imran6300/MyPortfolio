@@ -15,7 +15,7 @@ function App() {
           raysOrigin="top-center"
           raysColor="#C9D1D9"
           raysSpeed={2}
-          lightSpread={1}
+          lightSpread={0.6}
           rayLength={3}
           followMouse={true}
           mouseInfluence={0.5}
