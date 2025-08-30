@@ -31,7 +31,7 @@ const MyProjects = () => {
               </ul>
               <h6>
                 GitHub :{" "}
-                <a href="https://github.com/Imran6300/Ecommers" target="_main">
+                <a href="https://github.com/Imran6300/Furniture-Ecommers" target="_main">
                   github.com/Imran6300/Repo
                 </a>{" "}
               </h6>
@@ -78,7 +78,7 @@ const MyProjects = () => {
               </ul>
               <h6>
                 GitHub :{" "}
-                <a href="https://github.com/Imran6300/Furniture-Ecommers" target="_main">
+                <a href="https://github.com/Imran6300/DigitalAgency" target="_main">
                   github.com/Imran6300/Repo
                 </a>{" "}
               </h6>
@@ -122,7 +122,7 @@ const MyProjects = () => {
               <h6>
                 GitHub :{" "}
                 <a
-                  href="https://github.com/Imran6300/DigitalAgency"
+                  href=" https://github.com/Imran6300/Ecommers"
                   target="_blank"
                   rel=""
                 >
