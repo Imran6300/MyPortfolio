@@ -23,8 +23,9 @@ function App() {
           distortion={0}
           className="custom-rays"
         />
-        <HeroMain />
       </div>
+
+      <main><HeroMain /></main>
 
       {/* Sections */}
       <section id="about-me">
