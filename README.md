@@ -1,6 +1,6 @@
 <div align="center">
 
-# Syed Imran
+# Syed Mubashir
 
 ### MERN Stack & IoT-Focused Developer
 
@@ -29,7 +29,7 @@
 
 ---
 
-### 👋 Hi, I'm Syed Imran
+### 👋 Hi, I'm Syed Mubashir
 
 Passionate full-stack developer specializing in the **MERN stack** (MongoDB, Express, React, Node.js) with a strong focus on **IoT integrations** and building **scalable, production-ready applications**.
 
