@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ContactSection() {
-  // 🔒 Invisible fix — NO UI CHANGE
+  const [status, setStatus] = useState("idle");
+  // idle | sending | success | error
+
   const openEmail = (e) => {
     e.preventDefault();
     window.location.href = "mailto:syedimran8742@gmail.com";
@@ -12,7 +14,7 @@ export default function ContactSection() {
       id="contact"
       className="relative py-24 lg:py-40 bg-[#0A192F] overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background */}
       <div className="absolute inset-0 opacity-15 pointer-events-none">
         <img
           src="https://thumbs.dreamstime.com/b/technology-background-glowing-blue-cyan-electronic-circuit-board-lines-dark-gradient-abstract-to-light-403924659.jpg"
@@ -21,7 +23,6 @@ export default function ContactSection() {
         />
       </div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/80 via-[#0A192F]/90 to-[#0A192F] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20">
@@ -50,72 +51,107 @@ export default function ContactSection() {
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
+                setStatus("sending");
 
                 const formData = new FormData(e.target);
 
-                const res = await fetch("/api/contact", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({
-                    name: formData.get("name"),
-                    email: formData.get("email"),
-                    message: formData.get("message"),
-                  }),
-                });
+                try {
+                  const res = await fetch(
+                    "https://my-portfolio-vert-six-28.vercel.app/api/contact",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name: formData.get("name"),
+                        email: formData.get("email"),
+                        message: formData.get("message"),
+                      }),
+                    }
+                  );
 
-                if (res.ok) {
-                  alert("Message sent successfully 🚀");
+                  const data = await res.json();
+
+                  if (!data.success) {
+                    throw new Error(data.error || "Failed");
+                  }
+
+                  setStatus("success");
                   e.target.reset();
-                } else {
-                  alert("Failed to send message ❌");
+                } catch (err) {
+                  console.error(err);
+                  setStatus("error");
                 }
               }}
               className="space-y-8 bg-[#112240]/60 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl"
             >
+              {/* Name */}
               <div>
                 <label className="block text-[#CCD6F6] font-mono mb-2">
                   Name
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
                   required
-                  name="name"
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none"
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label className="block text-[#CCD6F6] font-mono mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  placeholder="you@example.com"
                   name="email"
+                  placeholder="you@example.com"
                   required
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none"
                 />
               </div>
 
+              {/* Message */}
               <div>
                 <label className="block text-[#CCD6F6] font-mono mb-2">
                   Message
                 </label>
                 <textarea
                   rows={6}
-                  placeholder="Tell me about your project..."
                   name="message"
+                  placeholder="Tell me about your project..."
                   required
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none resize-none"
                 />
               </div>
 
+              {/* Success / Error UI */}
+              {status === "success" && (
+                <div className="rounded-lg border border-[#64FFDA]/40 bg-[#64FFDA]/10 px-6 py-4 text-[#64FFDA] text-center font-mono">
+                  ✅ Message sent successfully! I’ll get back to you soon.
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="rounded-lg border border-red-400/40 bg-red-400/10 px-6 py-4 text-red-400 text-center font-mono">
+                  ❌ Failed to send message. Please try again.
+                </div>
+              )}
+
+              {/* Button */}
               <button
                 type="submit"
-                className="w-full mt-4 px-10 py-5 rounded-lg bg-[#64FFDA] text-[#0A192F] font-semibold text-lg hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(100,255,218,0.45)] transition-all duration-300"
+                disabled={status === "sending"}
+                className={`w-full mt-4 px-10 py-5 rounded-lg font-semibold text-lg transition-all duration-300
+                  ${
+                    status === "sending"
+                      ? "bg-[#64FFDA]/60 text-[#0A192F] cursor-not-allowed"
+                      : "bg-[#64FFDA] text-[#0A192F] hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(100,255,218,0.45)]"
+                  }
+                `}
               >
-                Send Message
+                {status === "sending" ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -150,13 +186,7 @@ export default function ContactSection() {
                     href={href}
                     aria-label={label}
                     onClick={label === "Email" ? openEmail : undefined}
-                    className="
-                      text-[#64FFDA]
-                      hover:text-white
-                      hover:-translate-y-1
-                      hover:shadow-[0_0_20px_rgba(100,255,218,0.3)]
-                      transition-all duration-300
-                    "
+                    className="text-[#64FFDA] hover:text-white hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(100,255,218,0.3)] transition-all duration-300"
                   >
                     <Icon />
                   </a>
