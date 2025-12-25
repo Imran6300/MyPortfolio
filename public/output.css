@@ -10,7 +10,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
-    --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -43,8 +42,6 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-sm: 8px;
     --blur-xl: 24px;
     --blur-2xl: 40px;
@@ -314,9 +311,6 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -353,9 +347,6 @@
   .w-9 {
     width: calc(var(--spacing) * 9);
   }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
   .w-24 {
     width: calc(var(--spacing) * 24);
   }
@@ -373,9 +364,6 @@
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
-  }
-  .max-w-6xl {
-    max-width: var(--container-6xl);
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
@@ -543,9 +531,6 @@
   }
   .bg-\[\#0A192F\]\/75 {
     background-color: color-mix(in oklab, #0A192F 75%, transparent);
-  }
-  .bg-\[\#0A192F\]\/90 {
-    background-color: color-mix(in oklab, #0A192F 90%, transparent);
   }
   .bg-\[\#0A192F\]\/95 {
     background-color: color-mix(in oklab, #0A192F 95%, transparent);
@@ -862,9 +847,6 @@
   }
   .\[animation-delay\:520ms\] {
     animation-delay: 520ms;
-  }
-  .\[animation-delay\:680ms\] {
-    animation-delay: 680ms;
   }
   .\[animation-delay\:700ms\] {
     animation-delay: 700ms;
