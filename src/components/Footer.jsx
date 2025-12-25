@@ -83,8 +83,8 @@ export default function Footer() {
 
         {/* Credit */}
         <p className="text-[#8892B0] text-sm">
-          © 2025 <span className="text-[#CCD6F6]">Syed Imran</span>. Built with
-          React & Tailwind CSS.
+          © 2025 <span className="text-[#CCD6F6]">Syed Mubashir</span>. Built
+          with React & Tailwind CSS.
         </p>
 
         <p className="text-[#64FFDA] text-xs mt-2 font-mono tracking-wide">
