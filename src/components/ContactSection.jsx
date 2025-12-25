@@ -47,7 +47,31 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Form */}
           <div>
-            <form className="space-y-8 bg-[#112240]/60 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl">
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(e.target);
+
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    message: formData.get("message"),
+                  }),
+                });
+
+                if (res.ok) {
+                  alert("Message sent successfully 🚀");
+                  e.target.reset();
+                } else {
+                  alert("Failed to send message ❌");
+                }
+              }}
+              className="space-y-8 bg-[#112240]/60 backdrop-blur-sm p-10 rounded-2xl border border-white/10 shadow-2xl"
+            >
               <div>
                 <label className="block text-[#CCD6F6] font-mono mb-2">
                   Name
@@ -56,6 +80,7 @@ export default function ContactSection() {
                   type="text"
                   placeholder="Your name"
                   required
+                  name="name"
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none"
                 />
               </div>
@@ -67,6 +92,7 @@ export default function ContactSection() {
                 <input
                   type="email"
                   placeholder="you@example.com"
+                  name="email"
                   required
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none"
                 />
@@ -79,6 +105,7 @@ export default function ContactSection() {
                 <textarea
                   rows={6}
                   placeholder="Tell me about your project..."
+                  name="message"
                   required
                   className="w-full px-6 py-4 rounded-lg bg-[#0A192F] border border-white/10 text-white focus:border-[#64FFDA] focus:ring-2 focus:ring-[#64FFDA]/20 outline-none resize-none"
                 />
