@@ -143,7 +143,7 @@ export default function ProjectsSection() {
         {/* View All */}
         <div className="text-center mt-24 animate-fade-up [animation-delay:1200ms]">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/imran6300"
             target="_blank"
             rel="noopener noreferrer"
             className="
