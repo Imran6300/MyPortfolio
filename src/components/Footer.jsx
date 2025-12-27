@@ -44,17 +44,17 @@ export default function Footer() {
         <div className="flex justify-center gap-10 mb-12">
           {[
             {
-              href: "https://github.com/yourusername",
+              href: "https://github.com/imran6300",
               label: "GitHub",
               icon: GitHubIcon,
             },
             {
-              href: "https://linkedin.com/in/yourusername",
+              href: "https://www.linkedin.com/in/syed-mubashir-ahmed-475362340",
               label: "LinkedIn",
               icon: LinkedInIcon,
             },
             {
-              href: "mailto:your.email@example.com",
+              href: "mailto:syedimran8742@gmail.com",
               label: "Email",
               icon: MailIcon,
             },
