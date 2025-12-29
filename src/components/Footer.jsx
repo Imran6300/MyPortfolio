@@ -54,7 +54,7 @@ export default function Footer() {
               icon: LinkedInIcon,
             },
             {
-              href: "mailto:syedimran8742@gmail.com",
+              href: "mailto:syedimran8742@gmail.com ",
               label: "Email",
               icon: MailIcon,
             },
